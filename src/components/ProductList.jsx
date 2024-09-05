@@ -34,10 +34,10 @@ export const ProductList = ({
 					</figure>
 					<div className='info-product'>
 						<h2>{product.nameProduct}</h2>
-						<p className='price'>${product.price}</p>
-						<button onClick={() => onAddProduct(product)}>
-							Añadir al carrito
-						</button>
+						{/* <p className='price'>${product.price}</p> */}
+						{/* <button onClick={() => onAddProduct(product)}>
+							Ver
+						</button> */}
 					</div>
 				</div>
 			))}
