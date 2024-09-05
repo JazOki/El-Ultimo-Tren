@@ -174,7 +174,7 @@ header {
     .item {
         width: 90%; /* Ajusta el ancho de las tarjetas para pantallas medianas */
         max-width: 250px; /* Tamaño máximo para las tarjetas en pantallas medianas */
-        height: 350px; /* Altura fija para todas las tarjetas en pantallas medianas */
+        height: auto; /* Altura automática para todas las tarjetas en pantallas medianas */
     }
 
     .logo {
@@ -200,20 +200,19 @@ header {
     }
 
     .container-items {
-        display: flex;
-        flex-direction: column; /* Alinea las tarjetas en una columna */
-        align-items: center; /* Centra las tarjetas */
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas para móviles */
         gap: 10px;
+        padding: 10px;
     }
 
     .item {
         width: 90%; /* Ajusta el ancho de las tarjetas para móviles */
         max-width: 200px; /* Tamaño máximo para tarjetas en móviles */
-        height: 300px; /* Altura fija para todas las tarjetas en móviles */
+        height: auto; /* Altura automática para todas las tarjetas en móviles */
     }
 
     .item img {
-        height: 60%; /* Ajusta la altura de la imagen al 60% de la tarjeta en móviles */
+        height: auto; /* Ajusta la altura de la imagen automáticamente en móviles */
     }
 
     .info-product {
