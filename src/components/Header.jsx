@@ -29,7 +29,7 @@ export const Header = ({
 	return (
 		<header>
 			<div className="logo-container">
-				<img src='/imagenes/logo_transparent.png' alt="Logo" className="logo" />
+				{/* <img src='/imagenes/logo_transparent.png' alt="Logo" className="logo" /> */}
 			</div>
 			{/* <h1>El Último Tren</h1> */}
 

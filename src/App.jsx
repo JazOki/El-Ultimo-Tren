@@ -14,16 +14,12 @@ function App() {
             <Header
                 allProducts={allProducts}
                 setAllProducts={setAllProducts}
-                total={total}
-                setTotal={setTotal}
                 countProducts={countProducts}
                 setCountProducts={setCountProducts}
             />
             <ProductList
                 allProducts={allProducts}
                 setAllProducts={setAllProducts}
-                total={total}
-                setTotal={setTotal}
                 countProducts={countProducts}
                 setCountProducts={setCountProducts}
             />

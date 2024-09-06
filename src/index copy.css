@@ -40,12 +40,12 @@ img {
     height: auto;
 }
 
-/* .logo-container {
+.logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: -15px;
-} */
+}
 
 .logo {
     max-width: 200px;
@@ -53,73 +53,70 @@ img {
     height: auto;
 }
 
+/* Header */
 header {
     display: flex;
-    justify-content: center; /* Centra el logo en el header */
+    justify-content: space-between;
     align-items: center;
-    padding: 5px; /* Reduce aún más el padding del header */
+    padding: 10px 20px;
+    /* Ajusta el padding del header para hacerlo más delgado */
     background-color: #ffffff;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    margin-bottom: 0; /* Elimina el margen inferior */
-    background-image: url('/imagenes/logo_transparent.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 80px; /* Reduce la altura del header */
+    margin-bottom: 20px;
+    /* Agrega un margen inferior al header para separar */
 }
-
-
 
 /* Tarjetas */
 .container-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Ajuste automático del número de columnas */
     gap: 20px;
     padding: 20px;
-    background-color: #000;
-    margin-top: 100px; /* Agrega margen superior para evitar la superposición */
+    background-color: #000000;
+    /* Color de fondo del contenedor */
 }
-
 
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a1a1a; /* Fondo oscuro de la tarjeta */
-    border-radius: 15px;
-    padding: 20px;
-    /* border: 2px solid #d4af37; Borde dorado */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-align: center;
+    border: 2px solid #d4af37; /* Borde dorado */
 }
 
 .item:hover {
-    transform: translateY(-5px); /* Efecto de levitación al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-color: #ffd700; /* Cambia a un dorado más claro al hacer hover */
 }
 
-/* Estilo de la imagen del producto */
 .product-image {
     width: 100%;
-    height: 220px; /* Ajusta la altura de la imagen */
+    height: 200px;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    object-fit: cover;
+    /* Ajusta la imagen sin distorsionarla */
 }
 
 .item img {
@@ -133,7 +130,6 @@ header {
 }
 
 
-/* Información del producto */
 .info-product {
     display: flex;
     flex-direction: column;
@@ -141,12 +137,11 @@ header {
 }
 
 .product-name {
-    color: #ffffff; /* Color dorado para el texto del producto */
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #333;
+    /* Color del texto */
+    font-size: 1rem;
+    font-weight: 500;
     margin-top: 10px;
-    font-family: 'Lora', serif; /* Fuente elegante y serif para el texto */
-    letter-spacing: 0.5px; /* Espaciado entre letras */
 }
 
 .price {
@@ -263,7 +258,7 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366; /* Color de fondo dorado */
+    background-color: #25d366;
     border: none;
     border-radius: 50%;
     width: 60px;
@@ -279,19 +274,9 @@ header {
 
 .whatsapp-button:hover {
     transform: scale(1.1);
-    background-color: #25D366; /* Color dorado más claro al pasar el mouse */
 }
 
 .whatsapp-icon {
-    color: #FFFFFF; /* Color del ícono de WhatsApp en blanco */
-    font-size: 30px; /* Ajusta el tamaño del ícono */
-}
-
-
-body {
-    /* background-image: url('/imagenes/logo_transparent.png'); Ruta de la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-color: #000; /* Color de fondo por si la imagen no carga */
+    width: 30px;
+    height: 30px;
 }
