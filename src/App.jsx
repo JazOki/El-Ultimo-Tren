@@ -1,42 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { ProductList } from './components/ProductList';
-import WhatsAppButton from './components/WhatsAppButton';
-import CategorySelector from './components/CategorySelector'; // Importa el selector de categoría
-import { data as initialData } from './data';
-import './index.css';
+// App.jsx
+import { useState } from 'react';
+import Header from './components/Header';
+import { data } from './data'; // Importa tu data de productos
 
 function App() {
-    const [allProducts, setAllProducts] = useState([]);
-    const [countProducts, setCountProducts] = useState(0);
-    const [selectedCategory, setSelectedCategory] = useState('Todos');
+    const [category, setCategory] = useState(''); // Estado para la categoría seleccionada
 
-    useEffect(() => {
-        setAllProducts(initialData);
-        setCountProducts(initialData.length);
-    }, []);
+    // Filtra los productos en función de la categoría seleccionada
+    const filteredProducts = category
+        ? data.filter((product) => product.category === category)
+        : data; // Si no hay categoría seleccionada, muestra todos los productos
 
     return (
         <div className="app-container">
-            <Header
-                allProducts={allProducts}
-                setAllProducts={setAllProducts}
-                countProducts={countProducts}
-                setCountProducts={setCountProducts}
-            />
-            {/* El selector de categoría debería aparecer aquí */}
-            <CategorySelector 
-                selectedCategory={selectedCategory} 
-                setSelectedCategory={setSelectedCategory} 
-            />
-            <ProductList
-                allProducts={allProducts}
-                setAllProducts={setAllProducts}
-                countProducts={countProducts}
-                setCountProducts={setCountProducts}
-                selectedCategory={selectedCategory} 
-            />
-            <WhatsAppButton />
+            <Header setCategory={setCategory} /> {/* Pasa la función para actualizar la categoría */}
+            <div className="container-items">
+                {filteredProducts.map((product) => (
+                    <div key={product.id} className="item">
+                        <div className="product-image">
+                            <img src={product.img} alt={product.nameProduct} />
+                        </div>
+                        <h3 className="product-name">{product.nameProduct}</h3>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

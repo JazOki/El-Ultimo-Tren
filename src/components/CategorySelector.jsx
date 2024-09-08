@@ -5,7 +5,7 @@ const CategorySelector = ({ selectedCategory, setSelectedCategory }) => {
     const categories = ['Todos', 'Licores', 'Cervezas', 'Bebidas', 'Botanas', 'Extras'];
 
     return (
-        <div className="category-selector">
+        <div className="nav-menu">
             <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
