@@ -55,9 +55,9 @@ img {
 
 header {
     display: flex;
-    justify-content: center; /* Centra el logo en el header */
+    justify-content: center;
     align-items: center;
-    padding: 5px; /* Reduce aún más el padding del header */
+    padding: 5px;
     background-color: #ffffff;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,24 +65,25 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    margin-bottom: 0; /* Elimina el margen inferior */
+    margin-bottom: 0;
     background-image: url('/imagenes/logo_transparent.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 80px; /* Reduce la altura del header */
+    height: 80px;
 }
+
 
 
 
 /* Tarjetas */
 .container-items {
+    margin-top: 160px; /* Incrementa el margen superior para compensar el header */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
     background-color: #000;
-    margin-top: 100px; /* Agrega margen superior para evitar la superposición */
 }
 
 
@@ -147,12 +148,6 @@ header {
     margin-top: 10px;
     font-family: 'Lora', serif; /* Fuente elegante y serif para el texto */
     letter-spacing: 0.5px; /* Espaciado entre letras */
-}
-
-.price {
-    font-size: 1.2rem;
-    /* Ajuste responsivo del tamaño de precio */
-    font-weight: 900;
 }
 
 .info-product button {
@@ -234,6 +229,15 @@ header {
         width: 35px;
         height: 35px;
     }
+    .category-selector {
+        flex-wrap: wrap;
+    }
+
+    .category-button {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Para móviles */
@@ -249,15 +253,22 @@ header {
         height: 150px;
         /* Ajusta la altura de imagen para móviles */
     }
-}
 
+    .category-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
 
 
 .app-container {
-    background-color: #000;
-    color: #ffffff;
+    position: relative; /* Necesario para que el selector se posicione en relación a este contenedor */
+    padding-top: 100px; /* Ajusta según la necesidad de espacio para el contenido debajo del header */
     min-height: 100vh;
+    overflow: visible;
 }
+
+
 
 .whatsapp-button {
     position: fixed;
@@ -294,4 +305,62 @@ body {
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
     background-color: #000; /* Color de fondo por si la imagen no carga */
+}
+
+/* File Categoria */
+
+.category-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; /* Posición absoluta para alinearlo a la derecha */
+    top: 20px; /* Reduce la distancia desde la parte superior */
+    right: 5px; /* Reduce la distancia desde el borde derecho */
+    z-index: 2;
+}
+
+
+.category-select {
+    padding: 4px 6px; /* Reduce el padding para que sea más compacto */
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+.category-select:hover {
+    border-color: #ffd700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Ajusta la sombra al hover */
+    transform: scale(1.03); /* Suaviza el efecto de escala */
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.4); /* Reduce la sombra al enfoque */
+}
+
+
+
+.category-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-button.active {
+    background-color: #ffd700; /* Color dorado para la categoría seleccionada */
+}
+
+.category-button:hover {
+    background-color: #555;
 }

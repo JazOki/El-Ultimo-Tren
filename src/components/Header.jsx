@@ -3,7 +3,6 @@ import { useState } from 'react';
 export const Header = ({
 	allProducts,
 	setAllProducts,
-	total,
 	countProducts,
 	setCountProducts,
 	setTotal,
@@ -15,7 +14,6 @@ export const Header = ({
 			item => item.id !== product.id
 		);
 
-		setTotal(total - product.price * product.quantity);
 		setCountProducts(countProducts - product.quantity);
 		setAllProducts(results);
 	};

@@ -144,12 +144,6 @@ header {
     margin-top: 10px;
 }
 
-.price {
-    font-size: 1.2rem;
-    /* Ajuste responsivo del tamaño de precio */
-    font-weight: 900;
-}
-
 .info-product button {
     border: none;
     background: none;
