@@ -77,11 +77,6 @@ img {
     font-size: 24px;
     z-index: 1001;
     transition: color 0.3s ease;
-    position: relative;
-}
-
-.menu-button-active {
-    color: white; /* Color blanco cuando el menú está activo */
 }
 
 .menu-button:hover {
@@ -107,7 +102,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 1000;
     transition: opacity 0.3s ease;
     opacity: 1;
 }

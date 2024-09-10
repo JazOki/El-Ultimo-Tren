@@ -1,7 +1,7 @@
-// components/ProductList.js
 import React from 'react';
 
-export const ProductList = ({ allProducts, setAllProducts, countProducts, setCountProducts, selectedCategory }) => {
+const ProductList = ({ allProducts, selectedCategory }) => {
+    // Filtrar los productos según la categoría seleccionada
     const filteredProducts = selectedCategory === 'Todos'
         ? allProducts
         : allProducts.filter(product => product.category === selectedCategory);
@@ -21,3 +21,5 @@ export const ProductList = ({ allProducts, setAllProducts, countProducts, setCou
         </div>
     );
 };
+
+export default ProductList; // Exportación por defecto
