@@ -1,7 +1,7 @@
-// App.js
 import React, { useState } from 'react';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
+import WhatsAppButton from './components/WhatsAppButton'; // Importa el componente del botón de WhatsApp
 import { data } from './data'; 
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
                 allProducts={filteredProducts}
                 selectedCategory={category}
             />
+            <WhatsAppButton /> {/* Incluye el botón de WhatsApp */}
         </div>
     );
 };

@@ -9,9 +9,12 @@ const WhatsAppButton = () => {
     };
 
     return (
-        <button className="whatsapp-button" onClick={handleWhatsAppClick}>
-            <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" /> {/* Usar el ícono de WhatsApp */}
-        </button>
+        <div className="whatsapp-container">
+            <span className="whatsapp-text">¿En qué podemos ayudarte?</span> {/* Etiqueta de texto */}
+            <button className="whatsapp-button" onClick={handleWhatsAppClick}>
+                <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" /> {/* Usar el ícono de WhatsApp */}
+            </button>
+        </div>
     );
 };
 

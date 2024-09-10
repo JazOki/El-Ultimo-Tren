@@ -214,3 +214,48 @@ img {
     }
     
 }
+
+/* WhatsApp */
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición desde el fondo */
+    right: 20px; /* Ajusta la posición desde la derecha */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y el botón */
+    z-index: 1000;
+    /* flex-direction: ; */
+     /* Cambia la dirección de los elementos para poner el ícono a la derecha */
+}
+
+.whatsapp-button {
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra alrededor del botón */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse */
+}
+
+.whatsapp-icon {
+    color: #fff; /* Color del icono de WhatsApp */
+    font-size: 24px; /* Tamaño del icono */
+}
+
+.whatsapp-text {
+    color: #fff; /* Color del texto */
+    background-color: #25D366; /* Fondo del texto */
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del texto */
+}
+
+
+
