@@ -16,7 +16,7 @@ export const data = [
     { "id": 10, "img": "/imagenes/licores/3030Reposado.jpg", "nameProduct": "30-30 Reposado", "quantity": 1, "category": "Licores" },
     { "id": 11, "img": "/imagenes/licores/plata.jpg", "nameProduct": "Centenario Plata", "quantity": 1, "category": "Licores" },
     { "id": 12, "img": "/imagenes/licores/Reposado.jpg", "nameProduct": "Centenario Reposado", "quantity": 1, "category": "Licores" },
-    { "id": 13, "img": "/imagenes/licores/Añejo.jpg", "nameProduct": "Centenario Añejo", "quantity": 1, "category": "Licores" },
+    { "id": 13, "img": "/imagenes/licores/añejo.jpg", "nameProduct": "Centenario Añejo", "quantity": 1, "category": "Licores" },
     { "id": 14, "img": "/imagenes/licores/Baileys.jpg", "nameProduct": "Baileys", "quantity": 1, "category": "Licores" },
     { "id": 15, "img": "/imagenes/licores/Barullo.png", "nameProduct": "Barullo", "quantity": 1, "category": "Licores" },
     { "id": 16, "img": "/imagenes/licores/BuchanansD.jpg", "nameProduct": "Buchanan's Deluxe", "quantity": 1, "category": "Licores" },
