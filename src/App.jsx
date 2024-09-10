@@ -1,31 +1,28 @@
 // App.jsx
 import { useState } from 'react';
-import Header from './components/Header';
-import { data } from './data'; // Importa tu data de productos
+import Header from '../src/components/Header'; // Asegúrate de tener el archivo Header.jsx importado correctamente
+import { data } from './data.js'; // Importa tu archivo de datos
 
-function App() {
-    const [category, setCategory] = useState(''); // Estado para la categoría seleccionada
+const App = () => {
+    const [category, setCategory] = useState('Todos'); // Estado para la categoría seleccionada
 
-    // Filtra los productos en función de la categoría seleccionada
-    const filteredProducts = category
-        ? data.filter((product) => product.category === category)
-        : data; // Si no hay categoría seleccionada, muestra todos los productos
+    // Filtrar productos por categoría seleccionada
+    const filteredProducts = category === 'Todos' ? data : data.filter(product => product.category === category);
 
     return (
-        <div className="app-container">
-            <Header setCategory={setCategory} /> {/* Pasa la función para actualizar la categoría */}
+        <div>
+            <Header setCategory={setCategory} /> {/* Pasa la función setCategory al Header */}
+            
             <div className="container-items">
-                {filteredProducts.map((product) => (
+                {filteredProducts.map(product => (
                     <div key={product.id} className="item">
-                        <div className="product-image">
-                            <img src={product.img} alt={product.nameProduct} />
-                        </div>
-                        <h3 className="product-name">{product.nameProduct}</h3>
+                        <img src={product.img} alt={product.nameProduct} className="product-image" />
+                        <div className="product-name">{product.nameProduct}</div>
                     </div>
                 ))}
             </div>
         </div>
     );
-}
+};
 
 export default App;
