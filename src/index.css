@@ -212,4 +212,5 @@ img {
     .product-image {
         aspect-ratio: 1 / 1.5; /* Mantén la proporción también en móviles */
     }
+    
 }
